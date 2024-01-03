@@ -62,6 +62,8 @@ function Board() {
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        drawHistory.current.push(imageData);
 
         const beginPath = (x, y) => {
             context.beginPath();
